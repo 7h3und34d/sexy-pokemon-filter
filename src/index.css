@@ -10,5 +10,5 @@ html,
 
 @font-face {
   font-family: gamefont;
-  src: url('./fonts/PokemonFonts.ttf');
+  src: url("./fonts/PokemonFonts.ttf");
 }

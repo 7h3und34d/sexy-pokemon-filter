@@ -1,5 +1,17 @@
 import { Box, Image } from "@fower/react";
 import { Pokemon } from "../machines";
+import { keyframes } from "@fower/core";
+
+const fadein = keyframes({
+     '0%': {
+        opacity: 0,
+        transform: 'translateY(40px)',
+    },
+    '100%': {
+        opacity: 1,
+        transform: 'translateY(0)',
+    }
+});
 
 const Card = ({
   name,
@@ -8,7 +20,19 @@ const Card = ({
 }: Pick<Pokemon, "name" | "type" | "base">): JSX.Element => {
   const imageSrc = `/pokemons/${name.english.toLowerCase()}.jpg`;
   return (
-    <Box p-10 border-1 borderGray500 roundedXL grid gap-10 grid-35-65>
+    <Box
+      cursorPointer
+      shadowXL--hover
+      shadowMD
+      p-10
+      border-1
+      borderGray500
+      roundedXL
+      grid
+      gap-10
+      grid-35-65
+      css={{ transition: "all 0.3s", animation: `${fadein} 1s ease` }}
+    >
       <Box grid gridTemplateColumns-2 gap-10>
         <Box>
           <Box textXL fontBold>
