@@ -4,9 +4,9 @@ import { FunctionComponent } from "react";
 const Header: FunctionComponent<{}> = ({ children }) => {
   return (
     <Box
-      h-40vh
+      h-100px
       w-100vw
-      bgAmber50
+      bg="#fffbeb"
       flex
       flexDirection="column"
       alignItems="center"

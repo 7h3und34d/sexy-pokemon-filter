@@ -1,6 +1,6 @@
 import { Box } from "@fower/react";
 import { FunctionComponent } from "react";
-import { FaSearch, FaFilter } from "react-icons/fa";
+import { FaSearch, FaSpinner } from "react-icons/fa";
 import { usePageCtx } from "../pageContext";
 
 const Container: FunctionComponent<{}> = ({ children }) => {
@@ -30,8 +30,8 @@ const SearchInput: FunctionComponent<{}> = () => {
       <Box
         w-50px
         p-1rem
-        bgAmber100
-        rose900
+        bg="#fef3c7"
+        color="#881337"
         fontBold
         textSM
         textLG--sm
@@ -41,7 +41,7 @@ const SearchInput: FunctionComponent<{}> = () => {
         text2XL--2xl
         roundedLLG
       >
-        {matches("typing") ? <FaFilter /> : <FaSearch />}
+        {matches("typing") ? <FaSpinner /> : <FaSearch />}
       </Box>
       <Box
         onChange={onChange}
@@ -51,8 +51,8 @@ const SearchInput: FunctionComponent<{}> = () => {
         as="input"
         outlineNone
         p-1rem
-        bgAmber100
-        rose900
+        bg="#fef3c7"
+        color="#881337"
         fontBold
         w-250px
         w-450px--sm
