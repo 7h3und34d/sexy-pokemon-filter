@@ -30,8 +30,8 @@ const SearchInput: FunctionComponent<{}> = () => {
       <Box
         w-50px
         p-1rem
-        bg="#fef3c7"
-        color="#881337"
+        bg="#d4d4d8"
+        color="#111827"
         fontBold
         textSM
         textLG--sm
@@ -46,13 +46,16 @@ const SearchInput: FunctionComponent<{}> = () => {
       <Box
         onChange={onChange}
         roundedRLG
-        css={{ ":focus": { backgroundColor: "#fde68a" } }}
+        css={{
+          ":focus": { backgroundColor: "#e4e4e7" },
+          transition: "all 0.4s",
+        }}
         ref={searchInput}
         as="input"
         outlineNone
         p-1rem
-        bg="#fef3c7"
-        color="#881337"
+        bg="#d4d4d8"
+        color="#111827"
         fontBold
         w-250px
         w-450px--sm

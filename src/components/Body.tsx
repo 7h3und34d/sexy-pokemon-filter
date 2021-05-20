@@ -16,6 +16,7 @@ const Body: FunctionComponent<{}> = ({ children }) => {
         gridTemplateColumns-4--2xl
         fontBold
         textXL
+        bg="#374151"
       >
         {children}
       </Box>

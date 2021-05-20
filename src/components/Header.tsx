@@ -6,7 +6,7 @@ const Header: FunctionComponent<{}> = ({ children }) => {
     <Box
       h-100px
       w-100vw
-      bg="#fffbeb"
+      bg="#a1a1aa"
       flex
       flexDirection="column"
       alignItems="center"

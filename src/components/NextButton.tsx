@@ -4,20 +4,14 @@ import { FaSpinner } from "react-icons/fa";
 
 const NextButton = (): JSX.Element => {
   const { onNext, hasMore, matches } = usePageCtx();
-  if (matches("loading_more")) {
-    return (
-      <Box w="100%" h-100px flex toCenter>
-        Loading <FaSpinner />
-      </Box>
-    );
-  }
   if (hasMore) {
     return (
-      <Box w="100%" h-100px flex toCenter>
+      <Box bg="#a1a1aa" w="100%" h-100px flex toCenter>
         <Box
+          fontBold
           as="button"
-          bg="#fef3c7"
-        color="#881337"
+          bg="#d4d4d8"
+          color="#111827"
           textXL
           p-22px
           rounded2XL
@@ -25,7 +19,7 @@ const NextButton = (): JSX.Element => {
           cursorPointer
           onClick={onNext}
         >
-          Load more
+          Load more {matches("loading_more") ? <FaSpinner /> : null}
         </Box>
       </Box>
     );
