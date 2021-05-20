@@ -6,7 +6,7 @@ import { usePageCtx } from "../pageContext";
 const Container: FunctionComponent<{}> = ({ children }) => {
   return (
     <Box
-      w-350px
+      w-300px
       w-500px--sm
       w-600px--md
       w-700px--lg
@@ -54,7 +54,7 @@ const SearchInput: FunctionComponent<{}> = () => {
         bgAmber100
         rose900
         fontBold
-        w-300px
+        w-250px
         w-450px--sm
         w-550px--md
         w-650px--lg

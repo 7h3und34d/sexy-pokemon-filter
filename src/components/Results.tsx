@@ -10,14 +10,15 @@ const Results = () => {
     if (value !== "idle") {
       return;
     }
-    const searchTerm = searchInput?.current?.value || "";
+    const searchTerm = searchInput?.current?.value.toLowerCase() || "";
+    console.log(searchTerm);
     if (value.length === 0) {
-      setResults(pokemons.slice(0, 10));
+      setResults(pokemons.slice(0, 12));
     } else {
       setResults(
         pokemons
-          .filter((p: Pokemon) => p.name.english.includes(searchTerm))
-          .slice(0, 10)
+          .filter((p: Pokemon) => p.name.english.toLowerCase().includes(searchTerm))
+          .slice(0, 12)
       );
     }
   }, [value, searchInput, pokemons]);
